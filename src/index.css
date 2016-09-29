@@ -4,6 +4,39 @@ body {
   font-family: sans-serif;
 }
 
+h1, h2, p, a {
+    line-height: 1.48;
+}
+h1 {
+    font-size: 4rem;
+}
+h2 {
+    font-size: 1.8rem;
+}
+p, a {
+    font-size: 1rem;
+}
+
+section {
+    max-width: 100vw;
+}
+@media screen and (min-width: 1px) {
+    section {
+        padding: 0;
+    }
+}
+@media screen and (min-width: 768px) {
+    section {
+        padding-left: 5vw;
+        padding-right: 5vw;
+    }
+}
+@media screen and (min-width: 1366px) {
+    section {
+        padding-left: 20vw;
+        padding-right: 20vw;
+    }
+}
 
 [role=grid] {
     display: flex;

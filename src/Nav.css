@@ -1,0 +1,13 @@
+nav {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    right: 0;
+    top: 0;
+    padding: 1em;
+    margin: 5em 2em;
+}
+
+nav a {
+    text-decoration: none;
+}
