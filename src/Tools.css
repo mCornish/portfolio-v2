@@ -1,3 +1,14 @@
 .tool-icon {
     width: 5em;
 }
+
+.tool-icon svg {
+    fill: rgb(30,30,30);
+    cursor: pointer;
+}
+.tool-icon svg:hover {
+    fill: #399aea;
+}
+.tool-icon:nth-child(2n) svg:hover {
+    fill: #e25a5a;
+}
