@@ -40,9 +40,14 @@ section {
 
 [role=grid] {
     display: flex;
+    flex-wrap: wrap;
 }
 [role=gridcell] {
     margin: 0 1em;
+}
+a[role=gridcell] {
+    text-decoration: none;
+    color: inherit;
 }
 
 
@@ -55,4 +60,7 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+.text-center {
+    text-align: center !important;
 }

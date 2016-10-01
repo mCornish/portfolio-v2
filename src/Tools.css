@@ -1,5 +1,16 @@
+.tools {
+    width: 50%;
+}
+
+.tools [role=grid] {
+    justify-content: center;
+}
+.tools [role=gridcell] {
+    margin: 1em;
+}
+
 .tool-icon {
-    width: 5em;
+    width: calc(15% - 2em); /* 2em accounts for margins on [role=gridcell] in index.css */
 }
 
 .tool-icon svg {

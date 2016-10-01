@@ -1,0 +1,23 @@
+.project {
+    transform: none;
+    margin: 0;
+    transition: transform .2s, margin .2s;
+}
+.project.is-active,
+.project:hover {
+    transform: scale(1.1);
+    margin: 0 2em;
+}
+
+
+.project__placeholder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20em;
+    height: 12em;
+    background-color: rgb(230,230,230);
+}
+.project__placeholder span {
+    color: rgb(150,150,150);
+}
