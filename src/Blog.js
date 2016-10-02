@@ -5,7 +5,7 @@ const Blog = (props) => {
     const content = () => (
         <div className="excerpt">
             <p>Blog post excerpt content goes here.</p>
-            <a role="button">Read More</a>
+            <a role="button" href="http://blog.mikecornish.net" target="_blank">Read More</a>
         </div>
     );
 
