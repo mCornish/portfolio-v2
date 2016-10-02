@@ -17,6 +17,7 @@ nav a {
     color: rgb(30,30,30);
     margin: 1em 0;
 }
-nav a:hover {
+nav a:hover,
+nav a.is-active {
     color: rgb(150,150,150);
 }

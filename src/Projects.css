@@ -1,12 +1,13 @@
 .project {
+    width: calc(33.33% - 2em);
+    will-change: transform;
     transform: none;
-    margin: 0;
     transition: transform .2s, margin .2s;
 }
 .project.is-active,
 .project:hover {
     transform: scale(1.1);
-    margin: 0 2em;
+    z-index: 1;
 }
 
 
