@@ -4,10 +4,19 @@ nav {
     flex-direction: column;
     right: 0;
     top: 0;
-    padding: 1em;
-    margin: 5em 2em;
+    width: calc(15vw - 4em);
+    min-width: 7em;
+    max-width: 10em;
+    height: 100vh;
+    padding: 3em 2em;
+    background-color: rgb(200,200,200);
 }
 
 nav a {
     text-decoration: none;
+    color: rgb(30,30,30);
+    margin: 1em 0;
+}
+nav a:hover {
+    color: rgb(150,150,150);
 }
