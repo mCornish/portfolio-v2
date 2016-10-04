@@ -4,12 +4,18 @@ nav {
     flex-direction: column;
     right: 0;
     top: 0;
-    width: calc(15vw - 4em);
+    width: calc(15vw - 4em + 1em); /* -4em for padding, +1 em for transform */
     min-width: 7em;
     max-width: 10em;
     height: 100vh;
     padding: 3em 2em;
+    margin-right: -1em; /* To make room for transform */
     background-color: rgb(200,200,200);
+    transform: none;
+    transition: transform .2s;
+}
+nav:hover {
+    transform: translateX(-1em);
 }
 
 nav a {

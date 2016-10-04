@@ -1,6 +1,7 @@
 import React from 'react';
 import './Nav.css';
 import $ from 'jquery';
+import Logo from './Logo';
 
 const _handleScroll = () => {
     const scrollPos = $(document).scrollTop();
@@ -40,8 +41,10 @@ const _handleClick = e => {
     _smoothScroll(e);
 };
 
+$(document).on('scroll', _handleScroll);
 const Nav = () =>
     <nav>
+        <Logo />
         <a href="#about" onClick={_handleClick}>About Me</a>
         <a href="#story" onClick={_handleClick}>My Story</a>
         <a href="#experience" onClick={_handleClick}>My Experience</a>

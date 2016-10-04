@@ -1,0 +1,11 @@
+.logo {
+    width: 50%;
+    margin: 0 auto;
+}
+.logo svg {
+    fill: rgb(80,80,80);
+    transition: fill .2s;
+}
+nav:hover svg {
+    fill: rgb(30,30,30);
+}

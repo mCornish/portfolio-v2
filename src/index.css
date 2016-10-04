@@ -51,7 +51,7 @@ section {
     flex-wrap: wrap;
 }
 [role=gridcell] {
-    margin: 0 1em;
+    margin: 1em;
 }
 a[role=gridcell] {
     text-decoration: none;

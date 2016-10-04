@@ -22,6 +22,7 @@ const Projects = ({activeTool}) =>
                     <a role="gridcell" href={project.link} key={i} className={`project ${_getActiveClass(project, activeTool)}`}>
                         {_renderThumbnail(project, i)}
                         <div className="project__name">{project.name}</div>
+                        <div className="project__shade"></div>
                     </a>
                 ))}
             </div>

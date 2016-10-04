@@ -1,13 +1,16 @@
+import blogThumb from './images/blog-thumb.jpg';
+import novelThumb from './images/novel-thumb.jpg';
+
 const projects = [
 {
     "name": "devStory Blog",
-    "thumbnail": null,
+    "thumbnail": blogThumb,
     "link": "http://devstory.mikecornish.net",
     "tools": ["HTML5", "CSS3"],
 },
 {
     "name": "Novel Website",
-    "thumbnail": null,
+    "thumbnail": novelThumb,
     "link": "http://novel.mikecornish.net",
     "tools": ["Angular", "HTML5", "CSS3"],
 },
