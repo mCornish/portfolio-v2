@@ -1,2 +1,2 @@
 # Mike Cornish's Portfolio
-More README content to be added.
+This website will replace my current portfolio at [mikecornish.net](http://mikecornish.net).
