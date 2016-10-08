@@ -17,55 +17,55 @@ const projects = [
 {
     "name": "Weather App",
     "thumbnail": null,
-    "link": "http://codepen.io/mCornish/full/pgmZXo/",
+    "codepenId": "pgmZXo",
     "tools": ["HTML5", "CSS3", "Sass"],
 },
 {
     "name": "Wikipedia Viewer",
     "thumbnail": null,
-    "link": "http://codepen.io/mCornish/full/WrqBPE/",
+    "codepenId": "WrqBPE",
     "tools": ["HTML5", "CSS3", "Sass"],
 },
 {
     "name": "Javascript Calculator",
     "thumbnail": null,
-    "link": "http://codepen.io/mCornish/full/jqNwvx/",
+    "codepenId": "jqNwvx",
     "tools": ["HTML5", "CSS3", "Sass"],
 },
 {
     "name": "Simon Game",
     "thumnail": null,
-    "link": "http://codepen.io/mCornish/full/xOZjXA/",
+    "codepenId": "xOZjXA",
     "tools": ["HTML5", "CSS3", "Sass"],
 },
 {
     "name": "Markdown Previewer",
     "thumbnail": null,
-    "link": "http://codepen.io/mCornish/full/zKObRp/",
+    "codepenId": "zKObRp",
     "tools": ["HTML5", "CSS3", "Sass", "React"],
 },
 {
     "name": "Free Code Camp Leaderboard",
     "thumbnail": null,
-    "link": "http://codepen.io/mCornish/full/pEJPbL/",
+    "codepenId": "pEJPbL",
     "tools": ["HTML5", "CSS3", "Sass", "React"],
 },
 {
     "name": "Recipe List with Local Storage",
     "thumbnail": null,
-    "link": "http://codepen.io/mCornish/full/bwVxLG/",
+    "codepenId": "bwVxLG",
     "tools": ["HTML5", "CSS3", "Sass", "React",]
 },
 {
     "name": "Bar Chart with D3.js",
     "thumbnail": null,
-    "link": "http://codepen.io/mCornish/full/WGGZaQ/",
+    "codepenId": "WGGZaQ",
     "tools": ["HTML5", "CSS3", "Sass", "D3"]
 },
 {
     "name": "Scatterplot with D3.js",
     "thumbnail": null,
-    "link": "http://codepen.io/mCornish/full/vXgNAr/",
+    "codepenId": "vXgNAr",
     "tools": ["HTML5", "CSS3", "Sass", "D3"]
 },
 {
