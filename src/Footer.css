@@ -15,13 +15,14 @@ footer > * {
 footer p {
     margin: 0;
 }
-footer a {
+footer a,
+footer a:visited {
     margin-left: .5em;
     color: inherit;
     text-decoration: none;
 }
 footer a:hover {
-    color: rgb(120,120,120);
+    color: #B466DB;
 }
 
 .footer__int-links {
