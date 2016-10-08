@@ -1,5 +1,6 @@
 import blogThumb from './images/blog-thumb.jpg';
 import novelThumb from './images/novel-thumb.jpg';
+import timestampThumb from './images/timestamp-thumb.jpg';
 
 const projects = [
 {
@@ -70,7 +71,7 @@ const projects = [
 },
 {
     "name": "Timestamp Microservice",
-    "thumbnail": null,
+    "thumbnail": timestampThumb,
     "link": "http://mctimestamp.herokuapp.com",
     "tools": ["HTML5", "CSS3", "Express"]
 },

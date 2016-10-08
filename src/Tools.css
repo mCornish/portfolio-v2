@@ -1,5 +1,5 @@
 .tools {
-    width: 70%;
+    width: 80%;
 }
 
 .tools [role=grid] {
@@ -10,7 +10,7 @@
 }
 
 .tool-icon {
-    width: calc(15% - 2em); /* 2em accounts for margins on [role=gridcell] in index.css */
+    width: calc(15% - (2em + 3em)); /* 2em for margins on [role=gridcell] in index.css. 3em for margins on hover. */
     min-width: 3em;
     transform: none;
     margin: 0;

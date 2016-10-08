@@ -4,13 +4,13 @@ import './Projects.css'
 
 
 const _getThumbnail = project => {
-    const getCodepenUrl = id => `https://codepen.io/oknoblich/pen/${id}/image/large.png`;
+    const getCodepenUrl = id => `https://codepen.io/oknoblich/pen/${id}/image/small.png`;
     return project.codepenId ? getCodepenUrl(project.codepenId) : project.thumbnail;
 }
 
 const _renderThumbnail = (project, i) => {
     if (_getThumbnail(project)) {
-        return <img className="project__thumbnail" src={_getThumbnail(project)} alt={project.name} target="_blank" />;
+        return <img className="project__thumbnail" src={_getThumbnail(project)} width="384" height="225" alt={project.name} target="_blank" />;
     } else {
         return (<div className="project__placeholder"><span>Project Thumbnail {i + 1}</span></div>);
     }
