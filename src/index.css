@@ -19,6 +19,9 @@ h2 {
     font-family: 'Merriweather', serif;
     margin-bottom: .5em;
 }
+h3 {
+    margin-top: 2em;
+}
 p, a {
     font-size: 1rem;
 }
@@ -34,6 +37,10 @@ a:visited {
 
 p {
     margin-bottom: 1em;
+}
+
+td {
+    padding: .5em 1em;
 }
 
 main {
