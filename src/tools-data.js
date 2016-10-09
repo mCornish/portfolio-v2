@@ -1,4 +1,5 @@
 import React from 'react';
+import shortid from 'shortid';
 
 const tools = [
 {
@@ -126,4 +127,8 @@ const tools = [
 },
 ];
 
-export default tools;
+// Add ID and export
+export default tools.map(tool => {
+    tool.id = shortid.generate();
+    return tool;
+});

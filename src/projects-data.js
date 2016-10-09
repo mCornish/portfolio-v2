@@ -1,3 +1,4 @@
+import shortid from 'shortid';
 import blogThumb from './images/blog-thumb.jpg';
 import novelThumb from './images/novel-thumb.jpg';
 import timestampThumb from './images/timestamp-thumb.jpg';
@@ -77,4 +78,8 @@ const projects = [
 },
 ];
 
-export default projects;
+// Add ID to each project and export
+export default projects.map(project => {
+    project.id = shortid.generate();
+    return project;
+});

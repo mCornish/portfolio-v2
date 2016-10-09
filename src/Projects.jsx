@@ -2,42 +2,42 @@ import React from 'react';
 import projects from './projects-data.js';
 import './Projects.css'
 
-
-const _getThumbnail = project => {
+const getThumbnail = project => {
     const getCodepenUrl = id => `https://codepen.io/oknoblich/pen/${id}/image/small.png`;
     return project.codepenId ? getCodepenUrl(project.codepenId) : project.thumbnail;
 }
 
-const _renderThumbnail = (project, i) => {
-    if (_getThumbnail(project)) {
-        return <img className="project__thumbnail" src={_getThumbnail(project)} width="384" height="225" alt={project.name} target="_blank" />;
+const renderThumbnail = (project, i) => {
+    if (getThumbnail(project)) {
+        return <img className="project__thumbnail" src={getThumbnail(project)} width="384" height="225" alt={project.name} target="_blank" />;
     } else {
         return (<div className="project__placeholder"><span>Project Thumbnail {i + 1}</span></div>);
     }
 };
 
-const _getActiveClass = (project, activeTool) => {
+const getActiveClass = (project, activeTool) => {
     return project.tools.indexOf(activeTool) > -1 ? 'is-active' : 'is-inactive';
 }
 
-const _getLink = project => {
+const getLink = project => {
     const codepenBase = 'http://codepen.io/mCornish/full/';
     return project.codepenId ? codepenBase + project.codepenId : project.link;
 }
 
 
-const Projects = ({activeTool}) =>
+export default function Projects({activeTool}) {
+    return (
         <div className="projects">
             <h2 className="text-center">My Projects</h2>
             <div role="grid">
                 {projects.map((project, i) => (
-                    <a role="gridcell" href={_getLink(project)} target="_blank" key={i} className={`project ${_getActiveClass(project, activeTool)}`}>
-                        {_renderThumbnail(project, i)}
+                    <a role="gridcell" href={getLink(project)} target="_blank" key={project.id} className={`project ${getActiveClass(project, activeTool)}`}>
+                        {renderThumbnail(project, i)}
                         <div className="project__name">{project.name}</div>
                         <div className="project__shade"></div>
                     </a>
                 ))}
             </div>
         </div>
-
-export default Projects;
+    );
+}

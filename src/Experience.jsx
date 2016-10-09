@@ -9,6 +9,9 @@ class Experience extends React.Component {
         this.state = {
             "activeTool": "",
         }
+
+        this.setActive = this.setActive.bind(this);
+        this.clearActive = this.clearActive.bind(this);
     }
     setActive(tool) {
         this.setState({"activeTool": tool});
@@ -19,7 +22,10 @@ class Experience extends React.Component {
     render() {
         return (
             <section id="experience" className="experience flex-center-col">
-                <Tools setActive={this.setActive.bind(this)} clearActive={this.clearActive.bind(this)} />
+                <Tools 
+                    setActive={this.setActive} 
+                    clearActive={this.clearActive} 
+                />
                 <Projects activeTool={this.state.activeTool} />
             </section>
         );
