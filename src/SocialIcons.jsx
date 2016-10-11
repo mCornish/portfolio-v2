@@ -1,9 +1,10 @@
 import React from 'react';
 import SocialIcon from './SocialIcon';
 import './SocialIcons.css';
+import shortid from 'shortid';
 
 
-const icons = [
+const iconVals = [
 {
     "type": "codepen",
     "url": "https://codepen.io/mCornish/"
@@ -18,11 +19,16 @@ const icons = [
 }
 ]
 
+const icons = iconVals.map(icon => {
+    icon.id = shortid.generate();
+    return icon;
+});
+
 export default function({theme, modifier}) {
     return (
         <div className={`social-icons is-${theme} social-icons--${modifier}`}>
             {icons.map(icon => 
-                <SocialIcon type={icon.type} url={icon.url} />
+                <SocialIcon type={icon.type} url={icon.url} key={icon.id} />
             )}
         </div>
     );

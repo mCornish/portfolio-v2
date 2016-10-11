@@ -1,0 +1,64 @@
+.projects
+  width: 90%
+
+
+.project
+  position: relative
+  width: calc(25% - 2em)
+  will-change: transform
+  transform: none
+  transition: transform .2s, margin .2s
+
+.project.is-active,
+.project:hover
+  transform: scale(1.1)
+  z-index: 1
+
+
+.project__thumbnail
+  width: 100%
+  height: 100%
+  border: 1px solid rgba(0,0,0,.3)
+
+
+.project__placeholder
+  display: flex
+  justify-content: center
+  align-items: center
+  width: 100%
+  height: 12em
+  background-color: rgb(230,230,230)
+
+.project__placeholder span
+  color: rgb(150,150,150)
+
+
+.project__name
+  position: absolute
+  left: 50%
+  top: 50%
+  color: rgb(250,250,250)
+  transform: translate(-50%, -50%)
+  opacity: 0
+  transition: opacity .2s
+  z-index: 1
+
+.project:hover .project__name,
+.is-active .project__name
+  opacity: 1
+
+
+.project__shade
+  background-color: black
+  opacity: 0
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  transition: opacity .2s
+
+.project:hover .project__shade,
+.is-active .project__shade
+  opacity: .7
+

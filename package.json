@@ -11,15 +11,26 @@
     "react-scripts": "0.6.0"
   },
   "dependencies": {
+    "concurrently": "^3.1.0",
     "jquery": "^3.1.1",
+    "node-sass": "^3.10.1",
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
     "shortid": "^2.2.6"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "npm run compile-sass && concurrently -r 'node-sass src -w -o src -r' 'react-scripts start'",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
-  }
+    "eject": "react-scripts eject",
+    "compile-sass": "node-sass src -o src"
+  },
+  "description": "Mike Cornish's portfolio",
+  "main": "index.js",
+  "repository": {
+    "url": "https://github.com/mCornish/portfolio-v2.git",
+    "type": "git"
+  },
+  "author": "Mike Cornish <cornishmw@gmail.com>",
+  "license": "MIT"
 }
