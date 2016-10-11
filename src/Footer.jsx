@@ -1,5 +1,6 @@
 import React from 'react';
 import './Footer.css';
+import SocialIcons from './SocialIcons';
 
 export default function (props) {
     return (
@@ -13,8 +14,10 @@ export default function (props) {
             </div>
             <div className="footer__ex-links">
                 <a href="http://www.devstory.mikecornish.net" target="_blank">My Blog</a>
-                <a href="http://www.novel.mikecornish.net" target="_blank">My Novel</a>
-                <a href="https://github.com/mCornish" target="_blank">My Github</a>
+                <SocialIcons 
+                    theme="dark" 
+                    modifier="footer" 
+                />
             </div>
       </footer>
     );

@@ -30,6 +30,7 @@ footer a:hover {
 }
 
 .footer__ex-links {
+    display: flex;
     float: right;
     margin-right: 1em;
 }

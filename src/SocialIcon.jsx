@@ -21,10 +21,11 @@ const types = {
 
 export default function({type, url}) {
     return (
-        <a href={url} target="_blank">
-            <svg viewBox="0 0 512 512" className="social-icon">
+        <a className="social-icon" href={url} target="_blank">
+            <svg viewBox="0 0 512 512" className="social-icon__image">
                 {types[type]()}
             </svg>
+            <div className="social-icon__text">{type}</div>
         </a>
     );
 }

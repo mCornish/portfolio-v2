@@ -1,10 +1,40 @@
 .social-icon {
     width: 5em;
     fill: rgb(30,30,30);
+    transition: fill .2s;
 }
-.social-icon:hover {
+
+.is-dark .social-icon__image {
+    fill: rgb(250,250,250);
+}
+.social-icon:hover .social-icon__image {
     fill: #399AEA;
 }
-a:nth-child(2n) .social-icon:hover {
+.social-icon:nth-child(2n):hover .social-icon__image {
     fill: #B466DB;
+}
+
+.social-icon__text {
+    text-align: center;
+    color: #399AEA;
+    text-decoration: none;
+    text-transform: capitalize;
+    opacity: 0;
+    transition: opacity .2s;
+}
+a:nth-child(2n) .social-icon__text {
+    color: #B466DB;
+}
+.social-icon:hover .social-icon__text {
+    opacity: 1;
+}
+
+.social-icons--footer .social-icon {
+    width: 2em;
+}
+.social-icons--footer .social-icon__image:hover {
+    fill: #B466DB;
+}
+.social-icons--footer .social-icon__text {
+    display: none;
 }

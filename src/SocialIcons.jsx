@@ -18,9 +18,9 @@ const icons = [
 }
 ]
 
-export default function() {
+export default function({theme, modifier}) {
     return (
-        <div className="social-icons">
+        <div className={`social-icons is-${theme} social-icons--${modifier}`}>
             {icons.map(icon => 
                 <SocialIcon type={icon.type} url={icon.url} />
             )}
