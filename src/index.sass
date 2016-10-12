@@ -47,7 +47,12 @@ td
 
 main
   position: relative
-  width: 85vw /* 100vw - 15vw Nav */
+  @media screen and (min-width: 1px)
+    width: 100vw
+  @media screen and (min-width: $break-tablet)
+    width: 80vw /* 100vw - 15vw Nav */
+  @media screen and (min-width: $break-desktop)
+    width: 85vw /* 100vw - 15vw Nav */
 
 section
   max-width: 100%
@@ -55,7 +60,7 @@ section
 
 @media screen and (min-width: 1px)
   section
-    padding: 0
+    padding: 1em
   
 @media screen and (min-width: 768px)
   section
@@ -92,6 +97,7 @@ a[role=button]
 [role=grid]
   display: flex
   flex-wrap: wrap
+  justify-content: center
 
 [role=gridcell]
   margin: 1em
@@ -103,6 +109,10 @@ a[role=gridcell]
 
 
 /* UTILITIES */
+.flex-row
+  display: flex !important
+  flex-direction: row !important
+
 .flex-center-row
   display: flex
   justify-content: center

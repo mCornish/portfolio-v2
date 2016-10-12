@@ -3,10 +3,21 @@
 
 .project {
   position: relative;
-  width: calc(25% - 2em);
   will-change: transform;
   transform: none;
   transition: transform .2s, margin .2s; }
+
+@media screen and (min-width: 1px) {
+  .project {
+    width: calc(100% - 2em); } }
+
+@media screen and (min-width: 768px) {
+  .project {
+    width: calc(50% - 2em); } }
+
+@media screen and (min-width: 1024px) {
+  .project {
+    width: calc(25% - 2em); } }
 
 .project.is-active,
 .project:hover {
