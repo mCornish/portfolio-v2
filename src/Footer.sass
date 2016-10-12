@@ -1,7 +1,7 @@
 @import 'variables'
 
-$_color-text: mix(desaturate($color-brand-1, 50), black, 80)
-$_color-hover: mix(desaturate($color-brand-2, 30), black, 100)
+$_color-text: mix(black, $color-brand-1, 40)
+$_color-hover: $color-brand-2
 
 footer
     position: relative
@@ -9,7 +9,7 @@ footer
     left: 0
     width: calc(100vw - 6em)
     padding: 2em 3em
-    background-color: $color-text-dark
+    background-color: mix(black, $color-brand-1, 90);
     color: $_color-text
     z-index: 1
     @media screen and (min-width: 1px)

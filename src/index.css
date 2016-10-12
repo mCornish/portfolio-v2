@@ -8,7 +8,11 @@ h1, h2, p, a {
   line-height: 1.48; }
 
 h1, h2 {
-  font-family: "Merriweather", serif; }
+  font-family: "Merriweather", serif;
+  margin-top: 0; }
+
+* + h1, * + h2 {
+  margin-top: 1em; }
 
 h1 {
   font-size: 4rem;
@@ -76,22 +80,27 @@ section {
 [role=button],
 a[role=button] {
   display: block;
-  width: 50%;
-  color: #399AEA;
-  border: 3px solid #399AEA;
+  width: 100%;
+  color: #e6e6e6;
+  border: 3px solid #e6e6e6;
   padding: 1em;
   margin: 0 auto;
   border-radius: 10em;
   font-weight: bold;
+  font-size: 1.5em;
   text-align: center;
   text-decoration: none;
-  text-transform: uppercase;
+  text-transform: capitalize;
   transition: color .2s, background-color .2s; }
 
 [role=button]:hover {
-  color: #fafafa;
-  background-color: #399AEA;
-  border-color: #399AEA; }
+  color: #e6e6e6;
+  background-color: #8766db;
+  border-color: #8766db; }
+
+* + [role=button],
+* + a[role=button] {
+  margin-top: 2em; }
 
 [role=grid] {
   display: flex;

@@ -1,0 +1,30 @@
+@import 'variables'
+
+.blog-post
+  padding-top: $spacer * 5
+  padding-bottom: $spacer * 5
+  color: $color-text-light
+  background-color: mix(black, $color-brand-1, 80)
+  background-image: url('./images/blog-back.png')
+  transition: background-image 1s
+
+.blog-post:hover
+  background-image: url('./images/blog-back-hover.png')
+
+.blog-post__chapter
+  font-weight: normal
+  text-align: center
+  margin: 0;
+  font-size: 2.3em
+
+.blog-post__title
+  color: $color-brand-1
+  font-weight: bold
+
+.blog-post__subtitle
+  text-align: center
+  margin-top: 0
+  font-size: 1.7em
+
+.blog-post__highlight
+  color: $color-brand-2
