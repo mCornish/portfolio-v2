@@ -90,8 +90,20 @@ const projects = [
 },
 ];
 
+
+// Most recent date gets rendered first
+const dateSort = (a, b) => {
+    if (a.created_on < b.created_on) {
+        return 1;
+    } else if (b.created_on < a.created_on) {
+        return -1;
+    } else {
+        return 0;
+    }
+}
+
 // Add ID to each project and export
-export default projects.map(project => {
+export default projects.sort(dateSort).map(project => {
     project.id = shortid.generate();
     return project;
 });
