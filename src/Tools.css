@@ -24,7 +24,7 @@
   cursor: pointer; }
 
 .tool-icon svg:hover {
-  fill: #399AEA; }
+  fill: #399aea; }
 
 .tool-icon:nth-child(2n) svg:hover {
-  fill: #B466DB; }
+  fill: #8766db; }

@@ -16,7 +16,7 @@
 .project__thumbnail {
   width: 100%;
   height: 100%;
-  border: 1px solid rgba(0, 0, 0, 0.3); }
+  border: 1px solid rgba(0, 0, 0, 0.2); }
 
 .project__placeholder {
   display: flex;
@@ -44,7 +44,7 @@
   opacity: 1; }
 
 .project__shade {
-  background-color: black;
+  background-color: #112e46;
   opacity: 0;
   position: absolute;
   top: 0;
@@ -52,6 +52,9 @@
   width: 100%;
   height: 100%;
   transition: opacity .2s; }
+
+.project:nth-child(2n) .project__shade {
+  background-color: #291f42; }
 
 .project:hover .project__shade,
 .is-active .project__shade {

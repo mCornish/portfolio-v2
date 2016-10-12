@@ -1,0 +1,46 @@
+@import 'variables'
+
+$_color-text: mix(desaturate($color-brand-1, 50), black, 80)
+$_color-hover: mix(desaturate($color-brand-2, 30), black, 100)
+
+footer
+    position: relative
+    bottom: 0
+    left: 0
+    width: calc(100vw - 6em)
+    padding: 2em 3em
+    background-color: $color-text-dark
+    color: $_color-text
+    z-index: 1
+
+
+footer > *
+    display: inline-block
+
+footer p
+    margin: 0
+
+footer a,
+footer a:visited
+    margin-left: 1em
+    color: $_color-text
+    text-decoration: none
+    font-weight: bold
+
+footer a:hover
+    color: $_color-hover
+
+
+.footer__int-links
+    margin-left: 1em
+
+
+.footer__ex-links
+    display: flex
+    float: right
+    margin-right: 1em
+
+footer .is-dark .social-icon__image
+  fill: $_color-text
+footer .is-dark .social-icon__image:hover
+  fill: $_color-hover

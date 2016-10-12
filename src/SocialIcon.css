@@ -9,21 +9,21 @@
   fill: #e6e6e6; }
 
 .social-icon:hover .social-icon__image {
-  fill: #399AEA; }
+  fill: #399aea; }
 
 .social-icon:nth-child(2n):hover .social-icon__image {
-  fill: #B466DB; }
+  fill: #8766db; }
 
 .social-icon__text {
   text-align: center;
-  color: #399AEA;
+  color: #399aea;
   text-decoration: none;
   text-transform: capitalize;
   opacity: 0;
   transition: opacity .2s; }
 
 a:nth-child(2n) .social-icon__text {
-  color: #B466DB; }
+  color: #8766db; }
 
 .social-icon:hover .social-icon__text {
   opacity: 1; }
@@ -32,7 +32,7 @@ a:nth-child(2n) .social-icon__text {
   width: 2em; }
 
 .social-icons--footer .social-icon__image:hover {
-  fill: #B466DB; }
+  fill: #8766db; }
 
 .social-icons--footer .social-icon__text {
   display: none; }

@@ -26,10 +26,10 @@ p, a {
   font-size: 1rem; }
 
 a {
-  color: #399AEA; }
+  color: #399aea; }
 
 a:hover {
-  color: #B466DB; }
+  color: #8766db; }
 
 a:visited {
   color: #a0b4d2; }
@@ -42,7 +42,6 @@ td {
 
 main {
   position: relative;
-  margin-bottom: 5em;
   width: 85vw; }
 
 section {
