@@ -2,6 +2,9 @@ import shortid from 'shortid';
 import blogThumb from './images/blog-thumb.jpg';
 import novelThumb from './images/novel-thumb.jpg';
 import timestampThumb from './images/timestamp-thumb.jpg';
+import headerThumb from './images/header-thumb.jpg';
+import shortenerThumb from './images/shortener-thumb.jpg';
+import searchThumb from './images/search-thumb.jpg';
 
 const projects = [
 {
@@ -87,6 +90,27 @@ const projects = [
     "link": "http://mctimestamp.herokuapp.com",
     "tools": ["HTML5", "CSS3", "Express", "Node"],
     "created_on": new Date('9/24/16')
+},
+{
+    "name": "Header Parser Microservice",
+    "thumbnail": headerThumb,
+    "link": "http://mc-header-parser.herokuapp.com/",
+    "tools": ["HTML5", "CSS3", "Express", "Node"],
+    "created_on": new Date('10/3/16')
+},
+{
+    "name": "URL Shortener Microservice",
+    "thumbnail": shortenerThumb,
+    "link": "http://mcshort.herokuapp.com/",
+    "tools": ["HTML5", "CSS3", "Express", "Node"],
+    "created_on": new Date('10/4/16')
+},
+{
+    "name": "Image Search Microservice",
+    "thumbnail": searchThumb,
+    "link": "http://mcsearch.herokuapp.com/",
+    "tools": ["HTML5", "CSS3", "Express", "Node"],
+    "created_on": new Date('10/6/16')
 },
 ];
 
