@@ -1,5 +1,9 @@
 .contact {
   background-color: #1b142c;
+  background-image: url("./images/contact-back.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   padding-top: 10em;
   padding-bottom: 10em;
   color: #e6e6e6; }

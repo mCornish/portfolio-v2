@@ -4,6 +4,7 @@
   color: #e6e6e6;
   background-color: #0b1f2f;
   background-image: url("./images/blog-back.png");
+  background-attachment: fixed;
   transition: background-image 1s; }
 
 .blog-post:hover {
