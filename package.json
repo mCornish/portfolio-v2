@@ -8,6 +8,7 @@
     "eslint-plugin-import": "^1.16.0",
     "eslint-plugin-jsx-a11y": "^2.2.3",
     "eslint-plugin-react": "^6.3.0",
+    "gh-pages": "^0.11.0",
     "react-scripts": "0.6.0"
   },
   "dependencies": {
@@ -21,6 +22,7 @@
   "scripts": {
     "start": "npm run compile-sass && concurrently -r 'node-sass src -w -o src -r' 'react-scripts start'",
     "build": "react-scripts build",
+    "deploy": "gh-pages -d build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "compile-sass": "node-sass src -o src"
@@ -31,6 +33,7 @@
     "url": "https://github.com/mCornish/portfolio-v2.git",
     "type": "git"
   },
+  "homepage": "http://mCornish.github.io/portfolio-v2",
   "author": "Mike Cornish <cornishmw@gmail.com>",
   "license": "MIT"
 }
