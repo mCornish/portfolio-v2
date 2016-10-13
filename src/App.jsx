@@ -7,12 +7,13 @@ import Experience from './Experience';
 import Contact from './Contact';
 import Footer from './Footer';
 
-import Mixpanel from 'mixpanel';
+import mixpanel from 'mixpanel-browser';
 
-const mixpanel = Mixpanel.init('5fbd1f3532c9111fee31a61c8132bc25');
-mixpanel.track('Page view');
+mixpanel.init('5fbd1f3532c9111fee31a61c8132bc25');
+mixpanel.track('Page View');
+exports.mixpanel = mixpanel;
 
-export default function() {
+export default function() { 
     return (
         <div>
             <Nav />

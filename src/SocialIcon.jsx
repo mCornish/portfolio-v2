@@ -1,5 +1,6 @@
 import React from 'react';
 import './SocialIcon.css';
+import {mixpanel} from './App';
 
 const types = {
     codepen() {
@@ -19,9 +20,15 @@ const types = {
     }
 }
 
+const handleClick = (type, e) => {
+    mixpanel.track('Social Click', {
+        'type': type
+    });
+}
+
 export default function({type, url}) {
     return (
-        <a className="social-icon" href={url} target="_blank">
+        <a className="social-icon" href={url} target="_blank" onClick={handleClick.bind(null, type)}>
             <svg viewBox="0 0 512 512" className="social-icon__image">
                 {types[type]()}
             </svg>

@@ -3,6 +3,8 @@ import './Nav.css';
 import $ from 'jquery';
 import Logo from './Logo';
 
+import { mixpanel } from './App';
+
 const _handleScroll = () => {
     const scrollPos = $(document).scrollTop();
     if ($(window).scrollTop() + $(window).height() === $(document).height()) {
@@ -44,6 +46,9 @@ const _handleClick = e => {
     $('nav a').removeClass('is-active');
     $(e.target).addClass('is-active');
     _smoothScroll(e);
+    mixpanel.track('Link Click', {
+        'name': $(e.target).text()
+    });
 };
 
 $(document).on('scroll', _handleScroll);
