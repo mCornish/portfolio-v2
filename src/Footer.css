@@ -7,15 +7,13 @@ footer {
   background-color: #060f17;
   color: #225d8c;
   z-index: 1; }
-
-@media screen and (min-width: 1px) {
-  footer {
-    display: flex;
-    justify-content: center; } }
-
-@media screen and (min-width: 1024px) {
-  footer {
-    display: block; } }
+  @media screen and (min-width: 1px) {
+    footer {
+      display: flex;
+      justify-content: center; } }
+  @media screen and (min-width: 1024px) {
+    footer {
+      display: block; } }
 
 footer > * {
   display: inline-block; }
@@ -39,14 +37,12 @@ footer a:hover {
 .footer__ex-links {
   float: right;
   margin-right: 1em; }
-
-@media screen and (min-width: 1px) {
-  .footer__ex-links {
-    display: none; } }
-
-@media screen and (min-width: 1024px) {
-  .footer__ex-links {
-    display: flex; } }
+  @media screen and (min-width: 1px) {
+    .footer__ex-links {
+      display: none; } }
+  @media screen and (min-width: 1024px) {
+    .footer__ex-links {
+      display: flex; } }
 
 footer .is-dark .social-icon__image {
   fill: #225d8c; }

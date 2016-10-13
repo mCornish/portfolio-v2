@@ -11,19 +11,16 @@ nav {
   transform: none;
   transition: transform .2s, background-color 3s;
   z-index: 1; }
-
-@media screen and (min-width: 1px) {
-  nav {
-    display: none; } }
-
-@media screen and (min-width: 768px) {
-  nav {
-    display: flex;
-    width: calc(20vw - 4em + 1em); } }
-
-@media screen and (min-width: 1024px) {
-  nav {
-    width: calc(15vw - 4em + 1em); } }
+  @media screen and (min-width: 1px) {
+    nav {
+      display: none; } }
+  @media screen and (min-width: 768px) {
+    nav {
+      display: flex;
+      width: calc(20vw - 4em + 1em); } }
+  @media screen and (min-width: 1024px) {
+    nav {
+      width: calc(15vw - 4em + 1em); } }
 
 nav:hover {
   background-color: #8766db;
