@@ -7,6 +7,11 @@ import Experience from './Experience';
 import Contact from './Contact';
 import Footer from './Footer';
 
+import Mixpanel from 'mixpanel';
+
+const mixpanel = Mixpanel.init('5fbd1f3532c9111fee31a61c8132bc25');
+mixpanel.track('Page view');
+
 export default function() {
     return (
         <div>
