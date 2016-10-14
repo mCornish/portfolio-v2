@@ -2,6 +2,7 @@ import React from 'react';
 import './Nav.css';
 import $ from 'jquery';
 import Logo from './Logo';
+import scrollToContainer from './scrollToContainer';
 
 import { mixpanel } from './App';
 
@@ -60,16 +61,6 @@ const handleKeydown = e => {
 };
 $(document).on('keydown', handleKeydown);
 
-function scrollToContainer(linkEl) {
-    const target = linkEl.hash;
-    const $target = $(target);
-    $('html, body').stop().animate({
-        'scrollTop': $target.offset().top + 2
-    }, 500, 'swing', function() {
-        window.location.hash = target;
-        $(document).on('scroll', _handleScroll);
-    });
-}
 
 const _smoothScroll = e => {
     e.preventDefault();
