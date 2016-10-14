@@ -24,15 +24,44 @@ const _handleScroll = () => {
     }    
 };
 
-const _smoothScroll = e => {
-    e.preventDefault();
-    $(document).off('scroll');
+const nextLink = () => {
+    const $activeLink = $('nav .is-active');
+    if ($activeLink) {
+        return $activeLink.next('a');
+    } else {
+        return $('nav a:first-child');
+    }
+}
+const prevLink = () => {
+    const $activeLink = $('nav .is-active');
+    if ($activeLink) {
+        return $activeLink.prev('a');
+    } else {
+        return $('nav a:first-child');
+    }
+}
 
-    $('nav a').removeClass('is-active');
-    $(e.target).addClass('is-active');
+function queryToHTML($selection) {
+    return $.parseHTML($selection[0].outerHTML)[0];
+}
 
-    const target = e.target.hash;
-    //const menu = target;
+const handleKeydown = e => {
+    if (e.which === 37 || e.which === 38) {
+        if (prevLink().length > 0) {
+            const link = queryToHTML(prevLink());
+            scrollToContainer(link);
+        }
+    } else if (e.which === 39 || e.which === 40) {
+        if (nextLink().length > 0) {
+            const link = queryToHTML(nextLink());
+            scrollToContainer(link);
+        }
+    }
+};
+$(document).on('keydown', handleKeydown);
+
+function scrollToContainer(linkEl) {
+    const target = linkEl.hash;
     const $target = $(target);
     $('html, body').stop().animate({
         'scrollTop': $target.offset().top + 2
@@ -40,6 +69,15 @@ const _smoothScroll = e => {
         window.location.hash = target;
         $(document).on('scroll', _handleScroll);
     });
+}
+
+const _smoothScroll = e => {
+    e.preventDefault();
+    $(document).off('scroll');
+
+    $('nav a').removeClass('is-active');
+    $(e.target).addClass('is-active');
+    scrollToContainer(e.target);
 };
 
 const _handleClick = e => {
