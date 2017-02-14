@@ -1,29 +1,24 @@
 .social-icon {
-  width: 5em; }
+  width: 5em;
+  text-decoration: none; }
 
 .social-icon__image {
-  fill: #1a1a1a;
+  fill: #e6e6e6;
   transition: fill .2s; }
 
 .is-dark .social-icon__image {
   fill: #e6e6e6; }
 
 .social-icon:hover .social-icon__image {
-  fill: #399aea; }
-
-.social-icon:nth-child(2n):hover .social-icon__image {
-  fill: #8766db; }
+  fill: #1a1a1a; }
 
 .social-icon__text {
   text-align: center;
-  color: #399aea;
+  color: #1a1a1a;
   text-decoration: none;
   text-transform: capitalize;
   opacity: 0;
   transition: opacity .2s; }
-
-a:nth-child(2n) .social-icon__text {
-  color: #8766db; }
 
 .social-icon:hover .social-icon__text {
   opacity: 1; }

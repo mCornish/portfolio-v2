@@ -16,9 +16,10 @@ const content = () => (
 
 export default function(props) {
     return (
-        <section id="about">
+        <section id="about" className="about">
             <div className="h-card">
-                <h1><span className="p-name">Mike Cornish</span> is a compulsive creator.</h1>
+                <h1><span className="p-name">Mike Cornish</span> is a</h1>
+                <h2>Frontend Developer</h2>
                 {content()}
                 <SocialIcons />
             </div>

@@ -22,11 +22,11 @@ class Experience extends React.Component {
     render() {
         return (
             <section id="experience" className="experience flex-center-col">
+                <Projects activeTool={this.state.activeTool} />
                 <Tools 
                     setActive={this.setActive} 
                     clearActive={this.clearActive} 
                 />
-                <Projects activeTool={this.state.activeTool} />
             </section>
         );
     }
