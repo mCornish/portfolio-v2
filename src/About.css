@@ -7,9 +7,18 @@
 .about + section {
   margin-top: 0; }
 
+.about .social-icons {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%) translateY(70%);
+  z-index: 5; }
+
 .h-card {
+  position: relative;
   opacity: .85;
-  transform: translateY(2.5em); }
+  padding-bottom: 2em;
+  z-index: 3; }
 
 .transition-shape {
   display: flex;
@@ -20,11 +29,15 @@
   transform: translateY(100%); }
 
 .trapezoid {
-  border-top: 5em solid #e6e6e6;
+  border-top: 4em solid #e6e6e6;
   border-left: 5em solid transparent;
   border-right: 5em solid transparent;
   height: 0;
-  width: calc(100% / 3); }
+  width: 60%; }
+
+.trapezoid:first-child,
+.trapezoid:last-child {
+  width: calc(40% / 2); }
 
 .trapezoid:first-child:before {
   content: '';
@@ -34,7 +47,7 @@
   top: 0;
   width: 0;
   height: 0;
-  border-bottom: 5em solid #e6e6e6;
+  border-bottom: 4em solid #e6e6e6;
   border-right: 5em solid transparent; }
 
 .trapezoid:last-child:after {
@@ -45,5 +58,5 @@
   top: 0;
   width: 0;
   height: 0;
-  border-bottom: 5em solid #e6e6e6;
+  border-bottom: 4em solid #e6e6e6;
   border-left: 5em solid transparent; }

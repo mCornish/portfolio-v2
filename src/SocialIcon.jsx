@@ -32,7 +32,8 @@ export default function({type, url}) {
             <svg viewBox="0 0 512 512" className="social-icon__image">
                 {types[type]()}
             </svg>
-            <div className="social-icon__text">{type}</div>
+            {/*<div className="social-icon__text">{type}</div>
+            */}
         </a>
     );
 }

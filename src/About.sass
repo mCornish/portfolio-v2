@@ -1,18 +1,29 @@
 @import 'variables'
 
-$shape-magnitude: 5em
+$shape-height: 4em
+$shape-width: 5em
 
 .about
   position: relative
   color: $color-text-dark
   background-color: $color-text-light
   padding-bottom: 0
+
 .about + section
   margin-top: 0
 
+.about .social-icons
+  position: absolute
+  left: 50%
+  bottom: 0
+  transform: translateX(-50%) translateY(70%)
+  z-index: 5
+
 .h-card
+  position: relative
   opacity: .85
-  transform: translateY(2.5em)
+  padding-bottom: 2em
+  z-index: 3
 
 .transition-shape
   display: flex
@@ -24,11 +35,15 @@ $shape-magnitude: 5em
   // z-index: -1
 
 .trapezoid
-  border-top: $shape-magnitude solid $color-text-light
-  border-left: $shape-magnitude solid transparent
-  border-right: $shape-magnitude solid transparent
+  border-top: $shape-height solid $color-text-light
+  border-left: $shape-width solid transparent
+  border-right: $shape-width solid transparent
   height: 0
-  width: calc(100% / 3)
+  width: 60%
+
+.trapezoid:first-child,
+.trapezoid:last-child
+  width: calc(40% / 2)
 
 .trapezoid:first-child:before
   content: ''
@@ -38,8 +53,8 @@ $shape-magnitude: 5em
   top: 0
   width: 0
   height: 0
-  border-bottom: $shape-magnitude solid $color-text-light
-  border-right: $shape-magnitude solid transparent
+  border-bottom: $shape-height solid $color-text-light
+  border-right: $shape-width solid transparent
   
 .trapezoid:last-child:after
   content: ''
@@ -49,5 +64,5 @@ $shape-magnitude: 5em
   top: 0
   width: 0
   height: 0
-  border-bottom: $shape-magnitude solid $color-text-light
-  border-left: $shape-magnitude solid transparent
+  border-bottom: $shape-height solid $color-text-light
+  border-left: $shape-width solid transparent
