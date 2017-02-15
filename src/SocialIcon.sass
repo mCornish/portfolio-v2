@@ -5,29 +5,29 @@
     text-decoration: none
 
 .social-icon__image
-  fill: $color-text-light
+  fill: $color-text-dark
   transition: fill .2s
 
 .is-dark .social-icon__image
     fill: $color-text-light
 
 .social-icon:hover .social-icon__image
-    fill: $color-text-dark
+    fill: $color-brand-1
 
-// .social-icon:nth-child(2n):hover .social-icon__image
-//     fill: $color-brand-2
+.social-icon:nth-child(2n):hover .social-icon__image
+    fill: $color-brand-2
 
 
 .social-icon__text
     text-align: center
-    color: $color-text-dark
+    color: $color-brand-1
     text-decoration: none
     text-transform: capitalize
     opacity: 0
     transition: opacity .2s
 
-// a:nth-child(2n) .social-icon__text
-//     color: $color-brand-2
+a:nth-child(2n) .social-icon__text
+    color: $color-brand-2
 
 .social-icon:hover .social-icon__text
     opacity: 1

@@ -23,6 +23,11 @@ export default function(props) {
                 {content()}
                 <SocialIcons />
             </div>
+            <div className="transition-shape">
+              <div className="trapezoid"></div>
+              <div className="trapezoid"></div>
+              <div className="trapezoid"></div>
+            </div>
         </section>
     );
 }

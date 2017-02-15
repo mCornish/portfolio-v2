@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import Nav from './Nav';
 import About from './About';
+import Blog from './Blog';
 import Experience from './Experience';
 import Writing from './Writing';
 import Contact from './Contact';
@@ -19,6 +20,7 @@ export default function() {
             <Nav />
             <main id="main">
                 <About />
+                <Blog />
                 <Experience />
                 <Writing />
                 <Contact />

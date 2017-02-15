@@ -1,21 +1,53 @@
+@import 'variables'
+
+$shape-magnitude: 5em
+
 .about
   position: relative
-  color: rgb(250,250,250)
-  background-color: rgb(57,154,234)
+  color: $color-text-dark
+  background-color: $color-text-light
   padding-bottom: 0
-
-.about:after
-  content: ""
-  position: absolute
-  bottom: -2.5em
-  left: 0
-  display: block
-  width: 100%
-  height: 5em
-  border-radius: 50%
-  background-color: rgb(57,154,234)
-  z-index: -1
+.about + section
+  margin-top: 0
 
 .h-card
   opacity: .85
   transform: translateY(2.5em)
+
+.transition-shape
+  display: flex
+  position: absolute
+  width: 100%
+  bottom: 0
+  left: 0
+  transform: translateY(100%)
+  // z-index: -1
+
+.trapezoid
+  border-top: $shape-magnitude solid $color-text-light
+  border-left: $shape-magnitude solid transparent
+  border-right: $shape-magnitude solid transparent
+  height: 0
+  width: calc(100% / 3)
+
+.trapezoid:first-child:before
+  content: ''
+  display: block
+  position: absolute
+  left: 0
+  top: 0
+  width: 0
+  height: 0
+  border-bottom: $shape-magnitude solid $color-text-light
+  border-right: $shape-magnitude solid transparent
+  
+.trapezoid:last-child:after
+  content: ''
+  display: block
+  position: absolute
+  right: 0
+  top: 0
+  width: 0
+  height: 0
+  border-bottom: $shape-magnitude solid $color-text-light
+  border-left: $shape-magnitude solid transparent
