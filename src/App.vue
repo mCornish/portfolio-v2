@@ -1,28 +1,38 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <hello></hello>
+    <nav></nav>
+    <main id="main">
+      <about></about>
+      <blog></blog>
+      <experience></experience>
+      <writing></writing>
+      <contact></contact>
+    </main>
   </div>
 </template>
 
 <script>
-import Hello from './components/Hello'
+import Nav from './components/Nav'
+import About from './components/About'
+import Blog from './components/Blog'
+import Experience from './components/Experience'
+import Writing from './components/Writing'
+import Contact from './components/Contact'
+import Footer from './components/Footer'
+
+import mixpanel from 'mixpanel-browser'
+
+mixpanel.init('5fbd1f3532c9111fee31a61c8132bc25')
+mixpanel.track('Page View')
+export { mixpanel }
 
 export default {
   name: 'app',
   components: {
-    Hello
+    Nav, About, Blog, Experience, Writing, Contact, Footer
   }
 }
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="sass">
 </style>
