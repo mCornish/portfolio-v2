@@ -1,10 +1,34 @@
 import $ from 'jquery'
 
 export {
-  scrollTo
+  scrollTo,
+  keyScroll
 }
 
-function scrollTo (linkEl) {
+function scrollTo (e) {
+  e.preventDefault()
+  $(document).off('scroll')
+
+  $('nav a').removeClass('is-active')
+  $(e.target).addClass('is-active')
+  smoothScroll(e.target)
+}
+
+function keyScroll (e) {
+  if (e.which === 37 || e.which === 38) {
+    if (prevLink().length > 0) {
+      const link = queryToHTML(prevLink())
+      scrollTo(link)
+    }
+  } else if (e.which === 39 || e.which === 40) {
+    if (nextLink().length > 0) {
+      const link = queryToHTML(nextLink())
+      scrollTo(link)
+    }
+  }
+}
+
+function smoothScroll (linkEl) {
   const target = linkEl.hash
   const $target = $(target)
   $('html, body').stop().animate({
@@ -34,3 +58,24 @@ function handleScroll () {
   }
 }
 
+function nextLink () {
+  const $activeLink = $('nav .is-active')
+  if ($activeLink) {
+    return $activeLink.next('a')
+  } else {
+    return $('nav a:first-child')
+  }
+}
+
+function prevLink () {
+  const $activeLink = $('nav .is-active')
+  if ($activeLink) {
+    return $activeLink.prev('a')
+  } else {
+    return $('nav a:first-child')
+  }
+}
+
+function queryToHTML ($selection) {
+  return $.parseHTML($selection[0].outerHTML)[0]
+}

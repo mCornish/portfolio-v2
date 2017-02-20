@@ -1,42 +1,36 @@
 <template>
   <div id="app">
-    <nav></nav>
+    <vert-nav></vert-nav>
     <main id="main">
-    <about></about>
-    <blog></blog>
-    <experience></experience>
-    <writing></writing>
-    <contact></contact>
+      <about></about>
+      <blog></blog>
+      <experience></experience>
+      <writing></writing>
+      <contact></contact>
     </main>
+    <main-footer></main-footer>
   </div>
 </template>
 
 <script>
-  import Nav from './components/Nav'
+  import VertNav from './components/VertNav'
   import About from './components/About'
   import Blog from './components/Blog'
   import Experience from './components/Experience'
   import Writing from './components/Writing'
   import Contact from './components/Contact'
-  import Footer from './components/Footer'
-
-  import mixpanel from 'mixpanel-browser'
-
-  mixpanel.init('5fbd1f3532c9111fee31a61c8132bc25')
-  mixpanel.track('Page View')
-  export { mixpanel }
+  import MainFooter from './components/MainFooter'
 
   export default {
     name: 'app',
     components: {
-      Nav, About, Blog, Experience, Writing, Contact, Footer
+      VertNav, About, Blog, Experience, Writing, Contact, MainFooter
     }
   }
 </script>
 
 <style lang="sass">
   @import './styles/variables'
-
 
   body
     position: relative
@@ -89,9 +83,9 @@
     @media screen and (min-width: 1px)
       width: 100vw
     @media screen and (min-width: $break-tablet)
-      width: 80vw /* 100vw - 15vw Nav */
+      width: 80vw /* 100vw - 15vw VertNav */
     @media screen and (min-width: $break-desktop)
-      width: 85vw /* 100vw - 15vw Nav */
+      width: 85vw /* 100vw - 15vw VertNav */
 
   section
     max-width: 100%
