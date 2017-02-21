@@ -1,16 +1,16 @@
 <template>
   <footer>
     <p>&copy; Mike Cornish.</p>
-    <div className="footer__int-links">
+    <div class="footer__int-links">
       <a href="#about" @click=handleClick>About</a>
       <a href="#story" @click=handleClick>Story</a>
       <a href="#experience" @click=handleClick>Experience</a>
       <a href="#contact" @click=handleClick>Contact</a>
     </div>
-    <div className="footer__ex-links">
+    <div class="footer__ex-links">
       <a href="http://www.devstory.mikecornish.net" target="_blank">My Blog</a>
       <social-icons 
-        theme="dark" 
+        theme="dark"
         modifier="footer"
       ></social-icons>
     </div>
@@ -86,6 +86,9 @@ footer a:hover
     display: none
   @media screen and (min-width: $break-desktop)
     display: flex
+
+.footer__ex-links > * + *
+  margin-left: 1em
 
 footer .is-dark .social-icon__image
   fill: $_color-text

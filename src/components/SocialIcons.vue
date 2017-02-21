@@ -1,9 +1,8 @@
 <template>
-  <div class="social-icons" :class="[themeClass, modifierClass]">
+  <div class="social-icons" :class="[`is-${theme}`, `social-icons--${modifier}`]">
     <a
       v-for="icon in icons"
       class="social-icon" 
-      :class="[themeClass, modifierClass]"
       :href="icon.url" 
       target="_blank" 
       @click=trackClick(icon.name)
@@ -22,8 +21,8 @@ export default {
   name: 'social-icons',
 
   props: {
-    themeClass: String,
-    modifierClass: String
+    theme: String,
+    modifier: String
   },
 
   data () {

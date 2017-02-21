@@ -113,9 +113,8 @@
   [role=button],
   a[role=button]
     display: block
-    width: 100%
+    width: calc(100% - 2em)
     color: $color-text-light
-    width: 100%
     color: $color-text-light
     border: 3px solid $color-text-light
     padding: 1em

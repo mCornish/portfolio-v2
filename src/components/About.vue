@@ -30,7 +30,7 @@
   }
 </script>
 
-<style scoped lang="sass">
+<style lang="sass">
   @import '../styles/variables'
 
   $shape-height: 4em
@@ -44,6 +44,8 @@
 
   .about + section
     margin-top: 0
+  .about + section > *:first-child
+    padding-top: 1em
 
   .about .social-icons
     position: absolute
@@ -86,7 +88,7 @@
     width: 0
     height: 0
     border-bottom: $shape-height solid $color-text-light
-    border-right: $shape-width solid transparent
+    border-right: $shape-width solid $color-text-light
 
   .trapezoid:last-child:after
     content: ''
@@ -97,5 +99,5 @@
     width: 0
     height: 0
     border-bottom: $shape-height solid $color-text-light
-    border-left: $shape-width solid transparent
+    border-left: $shape-width solid $color-text-light
 </style>
