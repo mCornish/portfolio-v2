@@ -75,7 +75,9 @@ nav a:visited
   color: rgb(250,250,250)
   opacity: .6
   margin: 1em 0
+  font-family: $font-stack-2
   font-weight: normal
+  text-transform: uppercase
   transform: none
   transition: transform .2s, opacity .2s
 

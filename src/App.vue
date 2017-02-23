@@ -4,7 +4,7 @@
     <main id="main">
       <about></about>
       <blog></blog>
-      <experience></experience>
+      <projects></projects>
       <writing></writing>
       <contact></contact>
     </main>
@@ -16,7 +16,7 @@
   import VertNav from './components/VertNav'
   import About from './components/About'
   import Blog from './components/Blog'
-  import Experience from './components/Experience'
+  import Projects from './components/Projects'
   import Writing from './components/Writing'
   import Contact from './components/Contact'
   import MainFooter from './components/MainFooter'
@@ -24,7 +24,7 @@
   export default {
     name: 'app',
     components: {
-      VertNav, About, Blog, Experience, Writing, Contact, MainFooter
+      VertNav, About, Blog, Projects, Writing, Contact, MainFooter
     }
   }
 </script>
@@ -44,9 +44,10 @@
 
   h1, h2
     font-family: $font-stack-2
-    margin-top: 0;
+    text-transform: uppercase
+    margin-top: 0
   * + h1, * + h2
-    margin-top: 1em;
+    margin-top: 1em
 
   h1
     font-size: 3rem
@@ -94,7 +95,7 @@
     margin-top: 5em
 
   section:first-child
-    padding-top: 1em
+    padding-top: 3em
 
   @media screen and (min-width: 1px)
     section
@@ -110,6 +111,7 @@
       padding-left: 20vw
       padding-right: 20vw
 
+  button,
   [role=button],
   a[role=button]
     display: block
@@ -121,12 +123,14 @@
     margin: 0 auto
     border-radius: 10em
     font-weight: bold
-    font-size: 1.5em;
+    font-size: 1.5em
+    font-family: $font-stack-2
     text-align: center
     text-decoration: none
-    text-transform: capitalize
+    text-transform: uppercase
     transition: color .2s, background-color .2s
-
+  
+  button:hover,
   [role=button]:hover
     color: $color-text-light
     background-color: $color-brand-2

@@ -1,8 +1,8 @@
 <template>
   <section id="about" class="about">
     <div class="h-card">
-      <h1><span class="p-name">Mike Cornish</span> is a</h1>
-      <h2>Frontend Developer</h2>
+      <h1 class="about__name"><span class="p-name">Mike Cornish</span> is a</h1>
+      <h2 class="about__title">Frontend Developer</h2>
       <div class="bio">
         <p>When I'm not designing and developing websites, I like to write stories and blog posts, sketch from life and my imagination, and occasionally create music. My main passion is learning, because it allows me to execute bigger, better, more ambitious creations.</p>
 
@@ -46,18 +46,23 @@
     margin-top: 0
   .about + section > *:first-child
     padding-top: 1em
+  
+  .about__name
+    margin: 0
+  .about__title
+    margin-top: 30
 
   .about .social-icons
     position: absolute
     left: 50%
     bottom: 0
-    transform: translateX(-50%) translateY(70%)
+    transform: translateX(-50%) translateY(50%)
     z-index: 5
 
   .h-card
     position: relative
     opacity: .85
-    padding-bottom: 2em
+    padding-bottom: 5em
     z-index: 3
 
   .transition-shape

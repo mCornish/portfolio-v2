@@ -1,5 +1,5 @@
 <template>
-<div class="projects">
+<section class="projects">
   <h2 class="text-center">My Projects</h2>
   <div class="projects__featured">
     <div
@@ -41,14 +41,14 @@
         <div class="project__shade"></div>
       </a>
   </div>
-</div>
+</section>
 </template>
 
 
 <script>
 import _ from 'lodash'
 import projects from '../project-data'
-// import { mixpanel } from '../main'
+import { mixpanel } from '../main'
 
 export default {
   name: 'projects',
@@ -72,6 +72,12 @@ export default {
   methods: {
     toggleGrid () {
       this.hasGrid = !this.hasGrid
+    },
+
+    trackClick (name) {
+      mixpanel.track('Project Click', {
+        name
+      })
     }
   }
 }
@@ -132,7 +138,7 @@ export default {
   opacity: 1
 
 .project__shade
-  background-color: mix($color-brand-1, black, 30);
+  background-color: mix($color-brand-1, black, 30)
   opacity: 0
   position: absolute
   top: 0
@@ -142,7 +148,7 @@ export default {
   transition: opacity .2s
 
 .project:nth-child(2n) .project__shade
-  background-color: mix($color-brand-2, black, 30);
+  background-color: mix($color-brand-2, black, 30)
 
 .project:hover .project__shade,
 .is-active .project__shade
