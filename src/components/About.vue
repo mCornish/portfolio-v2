@@ -50,7 +50,7 @@
   .about__name
     margin: 0
   .about__title
-    margin-top: 30
+    margin-top: 0
 
   .about .social-icons
     position: absolute

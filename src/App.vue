@@ -74,7 +74,10 @@
 
 
   p
-    margin-bottom: 1em
+    line-height: 1.8
+    text-indent: 2em
+  p + p
+    margin-top: 1em
 
   td
     padding: .5em 1em
