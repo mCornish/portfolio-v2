@@ -1,5 +1,5 @@
 <template>
-  <section id="story" class="blog-post">
+  <section id="blog" class="blog-post">
     <h2 class="blog-post__chapter">Chapter 5 <span class="blog-post__title">The New Kid (Again)</span></h2>
     <h3 class="blog-post__subtitle">Remembering How to Be a <span class="blog-post__highlight">Web Developer</span></h3>
     <div class="excerpt">

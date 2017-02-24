@@ -1,5 +1,5 @@
 <template>
-<section class="projects">
+<section id="projects" class="projects">
   <h2 class="text-center">My Projects</h2>
   <div v-show="!hasGrid" class="projects__featured">
     <div

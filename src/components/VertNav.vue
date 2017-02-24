@@ -3,9 +3,9 @@
     <Logo />
     <a href="#about" @click="handleClick">Me</a>
     <a href="#blog" @click="handleClick">Blog</a>
-    <a href="#experience" @click="handleClick">Projects</a>
+    <a href="#projects" @click="handleClick">Projects</a>
+    <a href="#designs" @click="handleClick">Designs</a>
     <a href="#writing" @click="handleClick">Writing</a>
-    <a href="#design" @click="handleClick">Design</a>
     <a href="#contact" @click="handleClick">Contact Me</a>
   </nav>
 </template>
@@ -16,6 +16,9 @@ import Logo from './Logo'
 import { scrollTo, keyScroll } from '../utils'
 import { mixpanel } from '../main'
 
+$(document).off('keydown')
+$(document).on('keydown', keyScroll)
+
 export default {
   name: 'vert-nav',
   components: {
@@ -23,8 +26,7 @@ export default {
   },
 
   ready () {
-    $(document.on('scroll', scrollTo))
-    $(document).on('keydown', keyScroll)
+    // $(document).on('keydown', keyScroll)
   },
 
   methods: {

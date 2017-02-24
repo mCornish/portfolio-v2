@@ -18,21 +18,27 @@ function keyScroll (e) {
   if (e.which === 37 || e.which === 38) {
     if (prevLink().length > 0) {
       const link = queryToHTML(prevLink())
-      scrollTo(link)
+      smoothScroll(link)
+      return
     }
+    smoothScroll($('#about'))
   } else if (e.which === 39 || e.which === 40) {
     if (nextLink().length > 0) {
       const link = queryToHTML(nextLink())
-      scrollTo(link)
+      smoothScroll(link)
+      return
     }
+    smoothScroll($('#contact'))
   }
 }
 
 function smoothScroll (linkEl) {
+  console.log(linkEl)
   const target = linkEl.hash
   const $target = $(target)
+  $(document).off('scroll')
   $('html, body').stop().animate({
-    'scrollTop': $target.offset().top + 2
+    'scrollTop': $target.offset().top + -100
   }, 500, 'swing', function () {
     window.location.hash = target
     $(document).on('scroll', handleScroll)
@@ -48,7 +54,7 @@ function handleScroll () {
     $('nav a').each(function () {
       const $currLink = $(this)
       const $refEl = $($currLink.attr('href'))
-      if ($refEl.offset().top <= scrollPos + 200 && $refEl.offset().top + $refEl.height() > scrollPos) {
+      if ($refEl.offset().top <= scrollPos + 300 && $refEl.offset().top + $refEl.height() > scrollPos) {
         $('nav a').removeClass('is-active')
         $currLink.addClass('is-active')
       } else {
@@ -62,18 +68,16 @@ function nextLink () {
   const $activeLink = $('nav .is-active')
   if ($activeLink) {
     return $activeLink.next('a')
-  } else {
-    return $('nav a:first-child')
   }
+  return $('nav a:first-child')
 }
 
 function prevLink () {
   const $activeLink = $('nav .is-active')
   if ($activeLink) {
     return $activeLink.prev('a')
-  } else {
-    return $('nav a:first-child')
   }
+  return $('nav a:first-child')
 }
 
 function queryToHTML ($selection) {
