@@ -5,6 +5,7 @@
       <about></about>
       <blog></blog>
       <projects></projects>
+      <design></design>
       <writing></writing>
       <contact></contact>
     </main>
@@ -17,6 +18,7 @@
   import About from './components/About'
   import Blog from './components/Blog'
   import Projects from './components/Projects'
+  import Design from './components/Design'
   import Writing from './components/Writing'
   import Contact from './components/Contact'
   import MainFooter from './components/MainFooter'
@@ -24,7 +26,7 @@
   export default {
     name: 'app',
     components: {
-      VertNav, About, Blog, Projects, Writing, Contact, MainFooter
+      VertNav, About, Blog, Projects, Design, Writing, Contact, MainFooter
     }
   }
 </script>
@@ -120,7 +122,7 @@
     display: block
     width: calc(100% - 2em)
     color: $color-text-light
-    color: $color-text-light
+    background-color: transparent
     border: 3px solid $color-text-light
     padding: 1em
     margin: 0 auto
@@ -131,13 +133,21 @@
     text-align: center
     text-decoration: none
     text-transform: uppercase
+    cursor: pointer
     transition: color .2s, background-color .2s
-  
-  button:hover,
-  [role=button]:hover
-    color: $color-text-light
-    background-color: $color-brand-2
-    border-color: $color-brand-2
+
+    &.--minor
+      background-color: $color-text-dark
+      color: $color-text-light
+      border: none
+      width: calc(50% - 2em)
+    &:hover,
+    &:focus
+      color: $color-text-light
+      background-color: $color-brand-2
+      border-color: $color-brand-2
+      outline: none
+
 
   * + [role=button],
   * + a[role=button]

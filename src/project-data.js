@@ -11,6 +11,7 @@ const projects = [
   {
     'name': 'devStory Blog',
     'thumbnail': blogThumb,
+    'description': 'My blog, which documents my experiences as a web developer and general creative.',
     'link': 'http://devstory.mikecornish.net',
     'tools': ['HTML5', 'CSS3'],
     'created_on': new Date('6/16/15'),
@@ -46,7 +47,8 @@ const projects = [
   },
   {
     'name': 'Simon Game',
-    'thumnail': null,
+    'thumbnail': novelThumb,
+    'description': 'A Free Code Camp project that emulates the popular toy, Simon.',
     'codepenId': 'xOZjXA',
     'tools': ['HTML5', 'CSS3', 'Sass'],
     'created_on': new Date('8/19/16'),
@@ -102,8 +104,9 @@ const projects = [
     'created_on': new Date('10/3/16')
   },
   {
-    'name': 'URL Shortener Microservice',
+    'name': 'URL Shortener',
     'thumbnail': shortenerThumb,
+    'description': 'An Express service that shortens URLs.',
     'link': 'http://mcshort.herokuapp.com/',
     'tools': ['HTML5', 'CSS3', 'Express', 'Node'],
     'created_on': new Date('10/4/16'),

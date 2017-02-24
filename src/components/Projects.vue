@@ -1,10 +1,10 @@
 <template>
 <section class="projects">
   <h2 class="text-center">My Projects</h2>
-  <div class="projects__featured">
+  <div v-show="!hasGrid" class="projects__featured">
     <div
       v-for="project in featured"
-      class="card"
+      class="project is-featured"
     >
       <img 
         class="project__thumbnail"
@@ -14,33 +14,34 @@
         :alt="project.name"
         target="_blank"
       />
-      <div class="card__text">
-        <h2>{{project.name}}</h2>
-        <p>{{project.description}}</p>
+      <div class="project__text">
+        <h2 class="project__title">{{project.name}}</h2>
+        <p class="project__description">{{project.description}}</p>
       </div>
     </div>
-    <button @click="toggleGrid">More Projects</button>
-    <div v-show="hasGrid" role="grid">
-      <a
-        v-for="project in projects"
-        role="gridcell"
-        :href="project.link"
-        target="_blank"
-        class="project"
-        @click="trackClick(project.name)"
-      >
-        <img 
-          class="project__thumbnail"
-          :src="project.thumbnail"
-          width="384"
-          height="225"
-          :alt="project.name"
-          target="_blank"
-        />
-        <div class="project__name">{{project.name}}</div>
-        <div class="project__shade"></div>
-      </a>
   </div>
+  <div v-show="hasGrid" role="grid">
+    <a
+      v-for="project in projects"
+      role="gridcell"
+      :href="project.link"
+      target="_blank"
+      class="project"
+      @click="trackClick(project.name)"
+    >
+      <img 
+        class="project__thumbnail"
+        :src="project.thumbnail"
+        width="384"
+        height="225"
+        :alt="project.name"
+        target="_blank"
+      />
+      <div class="project__name">{{project.name}}</div>
+      <div class="project__shade"></div>
+    </a>
+  </div>
+  <button class="projects__toggle --minor" @click="toggleGrid">{{buttonText}}</button>
 </section>
 </template>
 
@@ -66,6 +67,10 @@ export default {
     featured () {
       const isFeatured = _.partial(_.has, _, 'featured')
       return this.projects.filter(isFeatured)
+    },
+
+    buttonText () {
+      return this.hasGrid ? 'Featured Projects' : 'All Projects'
     }
   },
 
@@ -88,10 +93,15 @@ export default {
 @import '../styles/variables'
 
 .projects
-  width: 90%
+  padding-left: 2em
+  padding-right: 2em
+
+.projects__featured
+  display: flex
 
 .project
   position: relative
+  background-color: hsl(0,0,98)
   will-change: transform
   transform: none
   transition: transform .2s, margin .2s
@@ -107,10 +117,38 @@ export default {
   transform: scale(1.1)
   z-index: 1
 
+.project.is-featured
+  display: flex
+  flex-direction: column
+  border: 1px solid hsla(0,0,0,.2)
+  @media screen and (min-width: 1px)
+    width: calc(100%)
+  @media screen and (min-width: $break-tablet)
+    width: calc(33.33%)
+.project.is-featured:nth-child(2n)
+  justify-content: flex-end
+
+  .project__thumbnail
+    order: 2
+
+  .project__text
+    border-top: none
+    border-bottom: 1px solid hsla(0,0,0,.2)
+
+.project.is-featured + .project
+  border-left: none
+
+.project.is-featured + .project:hover
+  border: 1px solid hsla(0,0,0,.2)
+  
+
 .project__thumbnail
   width: 100%
   height: 100%
   border: 1px solid rgba(0,0,0,.2)
+
+.is-featured .project__thumbnail
+  height: auto
 
 .project__placeholder
   display: flex
@@ -122,6 +160,19 @@ export default {
 
 .project__placeholder span
   color: rgb(150,150,150)
+
+.project__text
+  padding: 2em
+  border-top: 1px solid hsla(0,0,0,.2)
+
+.project__title
+  position: relative
+  opacity: 1
+  color: $color-text-dark
+  font-size: 1em
+
+.project__description
+  text-indent: 0
 
 .project__name
   position: absolute
@@ -153,4 +204,7 @@ export default {
 .project:hover .project__shade,
 .is-active .project__shade
   opacity: .7
+
+.projects__toggle
+  margin-top: 2em
 </style>
