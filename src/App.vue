@@ -160,7 +160,7 @@
     justify-content: center
 
   [role=gridcell]
-    margin: 1em
+    margin: .05em
 
   a[role=gridcell]
     text-decoration: none

@@ -1,77 +1,52 @@
 <template>
-<section id="projects" class="projects">
-  <h2 class="text-center">My Projects</h2>
-
-  <div v-show="!hasGrid" class="projects__featured">
-    <featured-project 
-      v-show="!activeProject"
-      v-for="project in featured"
-      :project="project"
-      :set-active="setActive"
-    ></featured-project>
-    <project-detail 
-      v-if="activeProject"
-      :project="activeProject"
-      :close="clearActive"
-    ></project-detail>
-  </div>
-
-  <div v-show="hasGrid" role="grid">
-    <project-cell 
-        v-for="project in projects"
-        :project="project"
-    ></project-cell>
-  </div>
-  <button class="projects__toggle --minor" @click="toggleGrid">{{buttonText}}</button>
+<a
+  role="gridcell"
+  :href="project.link"
+  target="_blank"
+  class="project"
+  @click="trackClick(project.name)"
+>
+  <img 
+    class="project__thumbnail"
+    :src="project.thumbnail"
+    width="384"
+    height="225"
+    :alt="project.name"
+    target="_blank"
+  />
+  <div class="project__name">{{project.name}}</div>
+  <div class="project__shade"></div>
+</a>
 </section>
 </template>
 
 
 <script>
-import _ from 'lodash'
-import projects from '../project-data'
-import FeaturedProject from './ProjectFeatured'
-import ProjectCell from './ProjectCell'
-import ProjectDetail from './ProjectDetail'
+import { mixpanel } from '../main'
 
 export default {
-  name: 'projects',
-  components: {
-    FeaturedProject,
-    ProjectCell,
-    ProjectDetail
+  name: 'project-cell',
+
+  props: {
+    project: {
+      type: Object,
+      required: true
+    }
   },
 
   data () {
     return {
-      projects,
-      hasGrid: false,
-      activeProject: null
     }
   },
 
   computed: {
-    featured () {
-      const isFeatured = _.partial(_.has, _, 'featured')
-      return this.projects.filter(isFeatured)
-    },
-
-    buttonText () {
-      return this.hasGrid ? 'Featured Projects' : 'All Projects'
-    }
   },
 
   methods: {
-    toggleGrid () {
-      this.hasGrid = !this.hasGrid
-    },
-
-    setActive (project) {
-      this.activeProject = project
-    },
-
-    clearActive () {
-      this.activeProject = null
+    trackClick (name) {
+      mixpanel.track('Project Click', {
+        name
+      })
     }
   }
 }
