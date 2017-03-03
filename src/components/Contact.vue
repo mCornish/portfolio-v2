@@ -25,11 +25,12 @@ export default {
 @import '../styles/variables'
 
 .contact
-  background-color: mix(black, $color-brand-2, 80)
+  background-color: hsl(259, 64, 10)
   background-image: url('../assets/contact-back.svg')
   background-repeat: no-repeat
-  background-size: cover
+  background-size: fit
   background-position: center
+  background-attachment: fixed
   padding-top: $spacer * 10
   padding-bottom: $spacer * 10
   color: $color-text-light
