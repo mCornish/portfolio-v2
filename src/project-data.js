@@ -1,11 +1,11 @@
 import _ from 'lodash'
 import shortid from 'shortid'
-import blogThumb from './assets/blog-thumb.jpg'
-import novelThumb from './assets/novel-thumb.jpg'
-import timestampThumb from './assets/timestamp-thumb.jpg'
-import headerThumb from './assets/header-thumb.jpg'
-import shortenerThumb from './assets/shortener-thumb.jpg'
-import searchThumb from './assets/search-thumb.jpg'
+import blogThumb from './assets/projects/blog-thumb.jpg'
+import novelThumb from './assets/projects/novel-thumb.jpg'
+import timestampThumb from './assets/projects/timestamp-thumb.jpg'
+import headerThumb from './assets/projects/header-thumb.jpg'
+import shortenerThumb from './assets/projects/shortener-thumb.jpg'
+import searchThumb from './assets/projects/search-thumb.jpg'
 
 const projects = [
   {
