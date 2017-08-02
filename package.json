@@ -8,17 +8,20 @@
     "start": "npm run dev",
     "dev": "node build/dev-server.js",
     "build": "node build/build.js",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d dist",
     "unit": "cross-env BABEL_ENV=test karma start test/unit/karma.conf.js --single-run",
     "test": "npm run unit",
     "lint": "eslint --ext .js,.vue src test/unit/specs"
   },
   "dependencies": {
+    "ansi-html": "0.0.7",
+    "html-entities": "^1.2.1",
     "jquery": "^3.1.1",
     "lodash": "^4.17.4",
     "mixpanel-browser": "^2.11.0",
     "moment": "^2.17.1",
     "shortid": "^2.2.6",
+    "strip-ansi": "^4.0.0",
     "vue": "^2.1.10"
   },
   "devDependencies": {
