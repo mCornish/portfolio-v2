@@ -136,17 +136,32 @@
     cursor: pointer
     transition: color .2s, background-color .2s
 
-    &.--minor
-      background-color: $color-text-dark
-      color: $color-text-light
-      border: none
-      width: calc(50% - 2em)
     &:hover,
     &:focus
       color: $color-text-light
       background-color: $color-brand-2
       border-color: $color-brand-2
       outline: none
+    &.--minor
+      background-color: $color-text-dark
+      color: $color-text-light
+      border: none
+      width: calc(50% - 2em)
+    &.--close
+      color: $color-text-light
+      background-color: $color-text-dark
+      width: 2em
+      height: 2em
+      display: flex
+      justify-content: center
+      padding: 0
+      align-items: center
+      font-size: 1em
+      border: none
+      line-height: 1
+      &:hover
+        transform: rotate(360deg);
+        transition: transform .5s ease;
 
 
   * + [role=button],
@@ -172,14 +187,19 @@
   .flex-row
     display: flex !important
     flex-direction: row !important
-
   .flex-center-row
     display: flex
     justify-content: center
-
   .flex-center-col
     display: flex
     flex-direction: column
+    align-items: center
+  .flex-right
+    margin-left: auto
+    margin-right: 0
+  .content-center
+    justify-content: center
+  .items-center
     align-items: center
 
   .text-center

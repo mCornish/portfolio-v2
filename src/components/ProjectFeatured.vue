@@ -10,7 +10,10 @@
   />
   <div class="project__text">
     <h2 class="project__title">{{project.name}}</h2>
-    <p class="project__description">{{project.description}}</p>
+    <div
+      class="project__description"
+      v-html="project.description"
+    ></div>
   </div>
 </div>
 </template>
@@ -88,7 +91,7 @@ export default {
 .project.is-featured
   display: flex
   flex-direction: column
-  border: 1px solid hsla(0,0,0,.2)
+  // border: 1px solid hsla(0,0,0,.2)
   @media screen and (min-width: 1px)
     width: calc(100%)
   @media screen and (min-width: $break-tablet)
@@ -105,9 +108,11 @@ export default {
 
 .project.is-featured + .project
   border-left: none
+  margin-left: 3em
 
 .project.is-featured + .project:hover
   border: 1px solid hsla(0,0,0,.2)
+  cursor: pointer
   
 
 .project__thumbnail

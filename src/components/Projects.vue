@@ -2,12 +2,13 @@
 <section id="projects" class="projects">
   <h2 class="text-center">My Projects</h2>
 
-  <div v-show="!hasGrid" class="projects__featured">
+  <div v-show="!hasGrid" class="projects__featured flex-row content-center">
     <featured-project 
       v-show="!activeProject"
       v-for="project in featured"
       :project="project"
       :set-active="setActive"
+      v-bind:key="project.name"
     ></featured-project>
     <project-detail 
       v-if="activeProject"
@@ -18,11 +19,12 @@
 
   <div v-show="hasGrid" role="grid">
     <project-cell 
-        v-for="project in projects"
-        :project="project"
+      v-for="project in projects"
+      :project="project"
+      v-bind:key="project.name"
     ></project-cell>
   </div>
-  <button class="projects__toggle --minor" @click="toggleGrid">{{buttonText}}</button>
+  <!-- <button class="projects__toggle --minor" @click="toggleGrid">{{buttonText}}</button> -->
 </section>
 </template>
 
@@ -105,31 +107,6 @@ export default {
 .project:hover
   transform: scale(1.1)
   z-index: 1
-
-.project.is-featured
-  display: flex
-  flex-direction: column
-  border: 1px solid hsla(0,0,0,.2)
-  @media screen and (min-width: 1px)
-    width: calc(100%)
-  @media screen and (min-width: $break-tablet)
-    width: calc(33.33%)
-.project.is-featured:nth-child(2n)
-  justify-content: flex-end
-
-  .project__thumbnail
-    order: 2
-
-  .project__text
-    border-top: none
-    border-bottom: 1px solid hsla(0,0,0,.2)
-
-.project.is-featured + .project
-  border-left: none
-
-.project.is-featured + .project:hover
-  border: 1px solid hsla(0,0,0,.2)
-  
 
 .project__thumbnail
   width: 100%

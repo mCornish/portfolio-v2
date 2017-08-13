@@ -1,7 +1,7 @@
 <template>
   <section id="blog" class="blog-post">
     <h2 class="blog-post__chapter">Chapter 5 <span class="blog-post__title">The New Kid (Again)</span></h2>
-    <h3 class="blog-post__subtitle">Remembering How to Be a <span class="blog-post__highlight">Web Developer</span></h3>
+    <h3 class="blog-post__subtitle">BLOG POST: Remembering How to Be a <span class="blog-post__highlight">Web Developer</span></h3>
     <div class="excerpt">
       <p>I remember the moment I felt like I <em>might</em> actually belong. Before that moment, I was never fully aware of the importance of community in web development. For years, I was just a web developer after that moment, I was part of the web development community.</p>
       <a role="button" href="http://devstory.mikecornish.net/posts/chapter-5" target="_blank" @click="trackClick">Explore My Story</a>

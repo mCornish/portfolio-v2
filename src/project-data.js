@@ -2,28 +2,40 @@ import _ from 'lodash'
 import shortid from 'shortid'
 import blogThumb from './assets/projects/blog-thumb.jpg'
 import novelThumb from './assets/projects/novel-thumb.jpg'
-import timestampThumb from './assets/projects/timestamp-thumb.jpg'
-import headerThumb from './assets/projects/header-thumb.jpg'
-import shortenerThumb from './assets/projects/shortener-thumb.jpg'
-import searchThumb from './assets/projects/search-thumb.jpg'
+// import timestampThumb from './assets/projects/timestamp-thumb.jpg'
+// import headerThumb from './assets/projects/header-thumb.jpg'
+// import shortenerThumb from './assets/projects/shortener-thumb.jpg'
+// import searchThumb from './assets/projects/search-thumb.jpg'
 
 const projects = [
   {
-    'name': 'devStory Blog',
-    'thumbnail': blogThumb,
-    'description': 'My blog, which documents my experiences as a web developer and general creative.',
-    'link': 'http://devstory.mikecornish.net',
-    'tools': ['HTML5', 'CSS3'],
-    'created_on': new Date('6/16/15'),
-    'featured': true
+    name: 'devStory Blog',
+    thumbnail: blogThumb,
+    description: `
+    <p>My blog, which documents my experiences as a web developer and general creative.</p>
+    `,
+    link: 'http://devstory.mikecornish.net',
+    tools: ['HTML5', 'CSS3'],
+    created_on: new Date('6/16/15'),
+    featured: true
   },
   {
-    'name': 'Novel Website',
-    'thumbnail': novelThumb,
-    'link': 'http://novel.mikecornish.net',
-    'tools': ['Angular', 'HTML5', 'CSS3'],
-    'created_on': new Date('9/1/16')
+    name: 'Novel Website',
+    thumbnail: novelThumb,
+    link: 'http://novel.mikecornish.net',
+    tools: ['Vanilla', 'HTML5', 'CSS3'],
+    created_on: new Date('9/1/16'),
+    featured: true
   },
+  {
+    name: 'PlayPosit Content Browser',
+    // 'thumbnail': playpositThumb,
+    link: 'https://playposit.com',
+    tools: ['Vue.', 'HTML5', 'CSS3'],
+    created_on: new Date('9/1/16'),
+    featured: true
+  }
+  /*
   {
     'name': 'Weather App',
     'thumbnail': null,
@@ -119,6 +131,7 @@ const projects = [
     'tools': ['HTML5', 'CSS3', 'Express', 'Node'],
     'created_on': new Date('10/6/16')
   }
+  */
 ]
 
 // Most recent date gets rendered first

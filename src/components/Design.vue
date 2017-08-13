@@ -7,6 +7,7 @@
       role="gridcell" 
       class="design"
       :class="{'landscape': design.landscape}"
+      v-bind:key="design.name"
      >
       <img :src="design.url" :alt="design.name" />
     </div>

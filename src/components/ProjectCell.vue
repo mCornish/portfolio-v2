@@ -17,7 +17,6 @@
   <div class="project__name">{{project.name}}</div>
   <div class="project__shade"></div>
 </a>
-</section>
 </template>
 
 
