@@ -6,7 +6,10 @@ import mixpanel from 'mixpanel-browser'
 
 mixpanel.init('5fbd1f3532c9111fee31a61c8132bc25')
 mixpanel.track('Page View')
-export { mixpanel }
+
+const events = new Vue()
+
+export { mixpanel, events }
 
 /* eslint-disable no-new */
 new Vue({

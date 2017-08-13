@@ -7,20 +7,28 @@
       role="gridcell" 
       class="design"
       :class="{'landscape': design.landscape}"
+      @click="expand(design.name)"
       v-bind:key="design.name"
      >
       <img :src="design.url" :alt="design.name" />
+      <modal
+        :name="design.name"
+        :item="design"
+      ></modal>
     </div>
   </div>
 </section>
 </template>
 
 <script>
+import { events } from '../main'
+import Modal from './Modal'
 import designs from '../design-data'
 
 export default {
   name: '',
   components: {
+    Modal
   },
 
   data () {
@@ -30,6 +38,9 @@ export default {
   },
 
   methods: {
+    expand (name) {
+      events.$emit('modal:open', name)
+    }
   }
 }
 </script>
@@ -43,6 +54,7 @@ export default {
   width: 50%
   margin: 0
   outline: 1px solid hsla(0,0,100,.3)
+  cursor: pointer
 
   &.landscape
     width: 100%

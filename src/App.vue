@@ -185,8 +185,15 @@
 
   /* UTILITIES */
   .flex-row
-    display: flex !important
+    display: flex
     flex-direction: row !important
+  .flex-col
+    display: flex
+    flex-direction: column
+  .flex-center
+    display: flex
+    justify-content: center
+    align-items: center
   .flex-center-row
     display: flex
     justify-content: center
