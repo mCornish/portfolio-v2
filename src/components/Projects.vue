@@ -8,7 +8,7 @@
       v-for="project in featured"
       :project="project"
       :set-active="setActive"
-      v-bind:key="project.name"
+      v-bind:key="project.id"
     ></featured-project>
     <project-detail 
       v-if="activeProject"
@@ -21,7 +21,7 @@
     <project-cell 
       v-for="project in projects"
       :project="project"
-      v-bind:key="project.name"
+      v-bind:key="project.id"
     ></project-cell>
   </div>
   <!-- <button class="projects__toggle --minor" @click="toggleGrid">{{buttonText}}</button> -->

@@ -7,14 +7,16 @@
     class="--close modal__close"
     @click.stop="close"
   >✖</button>
-  <div class="flex-col">
-    <img 
-      class="modal__image"
-      :src="item.url"
-      :alt="item.name"
-      target="_blank"
-    />
-    <div class="project__text">
+  <div class="flex-col items-center">
+    <div>
+      <img 
+        class="modal__image"
+        :src="item.url"
+        :alt="item.name"
+        target="_blank"
+      />
+    </div>
+    <div class="modal__text">
       <h2 class="project__title">{{item.name}}</h2>
       <div
         class="project__description"
@@ -82,12 +84,18 @@ export default {
   width: 100vw
   height: 100vh
   padding-top: 5em
-  background-color: hsla(0,0,0,.9)
+  background-color: hsla(0,0,0,.95)
   color: $color-text-light
   z-index: 3
 
 .modal__image
-  max-height: 70vh
+  max-height: 50vh
+
+.modal__text
+  width: 70%
+  margin-top: 3em
+  padding-bottom: 5em
+  overflow: auto
 
 .modal__close
   position: absolute

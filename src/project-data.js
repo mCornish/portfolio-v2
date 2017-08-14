@@ -45,7 +45,7 @@ const projects = [
     `,
     link: 'https://playposit.com',
     tools: ['Vue.js', 'HTML5', 'CSS3'],
-    created_on: new Date('9/1/16'),
+    created_on: new Date('12/1/16'),
     featured: true
   }
   /*
@@ -160,7 +160,7 @@ const dateSort = (a, b) => {
 
 const addId = project => {
   const id = shortid.generate()
-  const newProj = _.assign(project, {id})
+  const newProj = _.assign({}, project, { id })
   return newProj
 }
 

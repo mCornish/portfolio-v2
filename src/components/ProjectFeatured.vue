@@ -135,11 +135,12 @@ export default {
   color: rgb(150,150,150)
 
 .project__text
-  padding: 2em
+  padding: 1em
   border-top: 1px solid hsla(0,0,0,.2)
 
 .project__title
   position: relative
+  margin: 0
   opacity: 1
   color: $color-text-dark
   font-size: 1.5em

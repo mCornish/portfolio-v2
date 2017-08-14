@@ -8,7 +8,7 @@
       class="design"
       :class="{'landscape': design.landscape}"
       @click="expand(design.name)"
-      v-bind:key="design.name"
+      v-bind:key="design.id"
      >
       <img :src="design.url" :alt="design.name" />
       <modal
