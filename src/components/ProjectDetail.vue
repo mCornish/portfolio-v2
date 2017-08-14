@@ -2,11 +2,14 @@
 <div class="project-detail flex-col">
   <button class="--close flex-right" @click="close">✖</button>
   <div class="flex-row">
-    <div class="project-detail__thumbnail-wrapper">
-      <img class="project-detail__thumbnail" :src="project.thumbnail" />
+    <div>
+      <div class="project-detail__thumbnail-wrapper">
+        <img class="project-detail__thumbnail" :src="project.thumbnail" />
+      </div>
     </div>
     <div class="flex-col project-detail__text">
-      <h2>{{project.name}}</h2>
+      <h2 class="project-detail__title">{{project.name}}</h2>
+      <h3 class="project-detail__subtitle">Main Tool: {{project.tools[0]}}</h3>
       <div 
         class="project__description"
         v-html="project.description"
@@ -57,4 +60,11 @@ export default {
 
 .project-detail__text
   margin-left: 3em
+
+.project-detail__title
+  margin: 0
+
+.project-detail__subtitle
+  margin: 0
+  margin-bottom: 1em
 </style>

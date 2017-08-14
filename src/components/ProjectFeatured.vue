@@ -10,10 +10,10 @@
   />
   <div class="project__text">
     <h2 class="project__title">{{project.name}}</h2>
-    <div
+    <!-- <div
       class="project__description"
       v-html="project.description"
-    ></div>
+    ></div> -->
   </div>
 </div>
 </template>
@@ -142,7 +142,7 @@ export default {
   position: relative
   opacity: 1
   color: $color-text-dark
-  font-size: 1em
+  font-size: 1.5em
 
 .project__description
   text-indent: 0
