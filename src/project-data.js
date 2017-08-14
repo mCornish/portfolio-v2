@@ -2,6 +2,7 @@ import _ from 'lodash'
 import shortid from 'shortid'
 import blogThumb from './assets/projects/blog-thumb.jpg'
 import novelThumb from './assets/projects/novel-thumb.jpg'
+import playpositThumb from './assets/projects/playposit-thumb.png'
 // import timestampThumb from './assets/projects/timestamp-thumb.jpg'
 // import headerThumb from './assets/projects/header-thumb.jpg'
 // import shortenerThumb from './assets/projects/shortener-thumb.jpg'
@@ -29,7 +30,7 @@ const projects = [
   },
   {
     name: 'PlayPosit Content Browser',
-    // 'thumbnail': playpositThumb,
+    'thumbnail': playpositThumb,
     link: 'https://playposit.com',
     tools: ['Vue.', 'HTML5', 'CSS3'],
     created_on: new Date('9/1/16'),
