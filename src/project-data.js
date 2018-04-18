@@ -17,7 +17,7 @@ const projects = [
       <p>I design devStory to be focus on my journey as a developer. From the book-like reading experience to the novel-inspired content, devStory is about storytelling more than anything else. It has evolved over time, but story has always been at its core.</p>
       <p>Though I haven’t kept up with the analytics of devStory, I have received occasional praise for the personality and inspiration in its content. That’s more than enough reason to keep writing.</p>
     `,
-    link: 'http://devstory.mikecornish.net',
+    link: 'http://devstory.mikecornish.me',
     tools: ['Jekyll', 'HTML5', 'CSS3'],
     created_on: new Date('6/16/15'),
     featured: true
@@ -30,7 +30,7 @@ const projects = [
       <p>The focus of the website is the header, which uses CSS animations to recreate a moment from the opening scene of the novel. Most of my time was spent on creating that effect. The other major programming effort was the smooth scrolling triggered when clicking on a link. The end result looks simple, but a lot of JavaScript work went into getting it just right.</p>
       <p>Ultimately, the website was only seen by my family and friends, some of whom supported my campaign. With more focus on analytics, I could have possibly created a bit of a case study from this project. I would like to try something similar in the future and complete a more detailed analysis of the results.</p>
     `,
-    link: 'http://novel.mikecornish.net',
+    link: 'http://novel.mikecornish.me',
     tools: ['Vanilla JS', 'HTML5', 'CSS3'],
     created_on: new Date('9/1/16'),
     featured: true

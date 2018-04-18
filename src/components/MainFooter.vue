@@ -8,7 +8,7 @@
       <a href="#contact" @click=handleClick>Contact</a>
     </div>
     <div class="footer__ex-links">
-      <a href="http://www.devstory.mikecornish.net" target="_blank">My Blog</a>
+      <a href="http://devstory.mikecornish.me" target="_blank">My Blog</a>
       <social-icons 
         theme="dark"
         modifier="footer"

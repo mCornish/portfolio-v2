@@ -3,6 +3,7 @@
     <h2>My Writing</h2>
     <ul class="writing">
       <li 
+        v-bind:key="item.url"
         v-for="item in writing"
         class="writing__item"
        >

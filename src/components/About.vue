@@ -11,6 +11,8 @@
 
         <p>Mostly I just play with JavaScript, though.</p>
         -->
+        <p>I am a JavaScript programmer who is enthusiastic about design, UX, writing, and business. Currently, I am working my way toward becoming a senior developer so that I can help teach and mentor newer developers. In the more distant future, I would like to either found or help run a business that develops technological solutions to business problems.</p>
+        <p>Outside of work, my primary focuses right now are serverless technology and artificial intelligence. Both are fields that seem to be rapidly on the rise. I’d like to be on that wave when it reaches its peak.</p>
       </div>
       <SocialIcons />
     </div>

@@ -24,7 +24,7 @@ const designs = [
     description: `
       <p>In my efforts to constantly improve myself, I occasionally happen upon fundamental flaws in my nature. One flaw I discovered in early 2017 was that I had a tendency to shirk from the possibility of failure (see “Make It Run”). I created this image as I was learning to remedy that flaw.</p>
       <p>I started trying things that I would usually avoid out of fear of embarrassment. I posted personal musings on Facebook in an attempt to polarize my friends into interacting with my content. I reached out to content creators to see if they wanted to collaborate, knowing I probably didn’t have the credential to deserve a response. I created images like this one even though I knew other, more experienced designers could do a much better job at it.</p>
-      <p>This culminated my getting an article published on one of my favorite JavaScript blogs, Javascript Scene. The article is called <a href=”https://medium.com/javascript-scene/fail-more-6e7719048618” target=”_blank>Fail More</a>.</p>
+      <p>This culminated my getting an article published on one of my favorite JavaScript blogs, Javascript Scene. The article is called <a href="https://medium.com/javascript-scene/fail-more-6e7719048618" target="_blank">Fail More</a>.</p>
     `,
     'url': failImg,
     'created': new Date('2/13/17')
