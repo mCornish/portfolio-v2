@@ -10,14 +10,14 @@ const projects = [
 {
     "name": "devStory Blog",
     "thumbnail": blogThumb,
-    "link": "http://devstory.mikecornish.net",
+    "link": "http://devstory.mikecornish.me",
     "tools": ["HTML5", "CSS3"],
     "created_on": new Date('6/16/15'),
 },
 {
     "name": "Novel Website",
     "thumbnail": novelThumb,
-    "link": "http://novel.mikecornish.net",
+    "link": "http://novel.mikecornish.me",
     "tools": ["Angular", "HTML5", "CSS3"],
     "created_on": new Date('9/1/16'),
 },
