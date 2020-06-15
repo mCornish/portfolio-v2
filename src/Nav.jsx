@@ -12,7 +12,6 @@ const Nav = () =>
         <a href="#about" onClick={handleClick}>Me</a>
         <a href="#experience" onClick={handleClick}>Projects</a>
         <a href="#writing" onClick={handleClick}>Writing</a>
-        <a href="#design" onClick={handleClick}>Design</a>
         <a href="#contact" onClick={handleClick}>Contact Me</a>
     </nav>
 
