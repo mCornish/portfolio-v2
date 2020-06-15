@@ -19,7 +19,7 @@ export default function (props) {
                 <a href="#contact" onClick={handleClick}>Contact</a>
             </div>
             <div className="footer__ex-links">
-                <a href="http://www.devstory.mikecornish.net" target="_blank">My Blog</a>
+                <a href="http://www.devstory.mikecornish.me" target="_blank">My Blog</a>
                 <SocialIcons 
                     theme="dark" 
                     modifier="footer" 
